@@ -1,0 +1,15 @@
+Install:
+        opam install js_of_ocaml
+
+in your .ml file:
+   open Js
+   open Firebug (* for console, etc. *)
+
+you need to compile your ml file to bytecode:
+    ocamlfind ocamlc -package js_of_ocaml -package js_of_ocaml.syntax -syntax camlp4o -linkpkg -o index.byte index.ml
+
+then compile the bytecode into javascript:
+        js_of_ocaml index.byte
+
+this will produce a file: index.js
+you can include this file inside html code.
