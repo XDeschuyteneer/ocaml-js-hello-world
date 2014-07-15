@@ -9,7 +9,10 @@ you need to compile your ml file to bytecode:
     ocamlfind ocamlc -package js_of_ocaml -package js_of_ocaml.syntax -syntax camlp4o -linkpkg -o index.byte index.ml
 
 then compile the bytecode into javascript:
-        js_of_ocaml index.byte
+     js_of_ocaml index.byte
 
 this will produce a file: index.js
 you can include this file inside html code.
+
+To see this hello world in action, just compile into bytecode, then into javascript, then open index.html.
+You will see a popup message and a message inside the javascript console.
